@@ -1,0 +1,43 @@
+package com.ass.dto;
+
+import javax.validation.constraints.Email;
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
+
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
+public class UserDTO {
+
+	private Integer id;
+	
+	@NotNull
+	@NotBlank //chi dung cho chuoi
+	private String username;
+	
+	@NotNull
+	@NotBlank
+	private String password;
+	
+	@NotNull
+	@NotBlank
+	@Email
+	private String email;
+	
+//	@NotNull
+	@NotBlank
+	private String photo;
+	
+	@NotNull
+	private Integer activated;
+	
+	@NotNull
+	private Integer admin;
+	
+}
